@@ -1,0 +1,11 @@
+Seeded using ccg's dotfiles
+
+# i like how this guy sets up his dotfiles
+http://www.swaroopch.com/blog/bash-vim-setup/
+
+http://news.ycombinator.com/item?id=359817
+http://news.ycombinator.com/item?id=1590713
+
+https://github.com/ryanb/dotfiles
+
+http://ditoinfo.wordpress.com/2007/11/18/change-vim-swap-swp-files-default-path/

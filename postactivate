@@ -1,0 +1,12 @@
+#!/bin/sh
+
+coderoot="$HOME/code"
+project="${ACTIVE_VIRTUALENV%%-*}"
+codedir="$coderoot/$project"
+
+if [ -d "$codedir" ]; then
+    echo "cd $codedir"
+    cd "$codedir"
+else
+    echo "ERROR: Could not find dir $codedir."
+fi

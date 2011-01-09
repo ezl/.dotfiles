@@ -1,0 +1,23 @@
+###################################################
+### virtualenvwrapper
+###################################################
+export WORKON_HOME=$HOME/.virtualenv
+if [ ! -d $WORKON_HOME ]
+then
+    mkdir -p $WORKON_HOME
+fi
+[ -f ~/.virtualenvwrapper_bashrc ] && source ~/.virtualenvwrapper_bashrc
+
+
+function active_virtualenv {
+    if [ "$ACTIVE_VIRTUALENV" != "" ]
+    then
+        echo -n " (Virtualenv: $ACTIVE_VIRTUALENV)"
+    fi
+}
+
+function install_pil {
+    cdsitepackages || return 1
+    ln -s "/usr/lib/python2.5/site-packages/PIL" .
+    cd -
+}

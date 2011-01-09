@@ -1,0 +1,33 @@
+###################################################
+### Aliases
+###################################################
+
+# My most common typo.
+# Dear Ubuntu, please stop telling me to "sudo apt-get install sl"
+alias sl=ls
+
+alias mv='mv -iv'
+alias cp='cp -iv'
+
+alias grep='grep -n --color=auto'
+alias fgrep='fgrep -n --color=auto'
+alias egrep='egrep -n --color=auto'
+alias rgrep='rgrep -n --color=auto'
+alias diff='colordiff'
+
+# ccg's aliases
+# alias dj='python ./manage.py runserver 0.0.0.0:8003'
+# alias djp='python ./manage.py runserver_plus 0.0.0.0:8003'
+# alias djl='python ./manage.py runserver 0.0.0.0:8003 --settings=local-settings'
+# alias djpl='python ./manage.py runserver_plus 0.0.0.0:8003 --settings=local-settings'
+# alias djc='python ./manage.py runserver 0.0.0.0:8003 --settings=ccg-settings'
+# alias djpc='python ./manage.py runserver_plus 0.0.0.0:8003 --settings=ccg-settings'
+# alias djs="python ./manage.py shell_plus"
+# alias djsc="python ./manage.py shell_plus --settings=ccg-settings"
+# 
+# alias lrz1='ssh -Ax -p 2222 cglendenin@lrz1'
+# alias lrz2='ssh -Ax -p 2222 cglendenin@lrz2'
+# alias lrz3='ssh -Ax -p 22 ccg@lrz3'
+# 
+# alias hs1='ssh -Ax chadg@highsite1'
+# alias hs2='ssh -Ax ccg@highsite2'
