@@ -37,7 +37,9 @@ do
 done
 
 echo "Installing virtualenv hooks."
-install_scripts "$HOME/env" postactivate postmkvirtualenv
+
+#This needs to correspond with your $WORKON_HOME as defined in virtualenvwrapper_bashrc
+install_scripts "$HOME/.virtualenvs" postactivate postmkvirtualenv
 
 source git.sh
 
