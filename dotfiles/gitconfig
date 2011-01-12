@@ -1,0 +1,12 @@
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+[user]
+	name = ezl
+	email = ericzliu@gmail.com
+[core]
+	excludesfile = ~/.gitexcludes
+[push]
+	default = matching

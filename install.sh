@@ -41,8 +41,6 @@ echo "Installing virtualenv hooks."
 #This needs to correspond with your $WORKON_HOME as defined in virtualenvwrapper_bashrc
 install_scripts "$HOME/.virtualenvs" postactivate postmkvirtualenv
 
-source git.sh
-
 #First time? Modify bashrc.
 if ! grep -q "ezlrc" ~/.bashrc
 then
