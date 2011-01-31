@@ -304,3 +304,21 @@ function cdvirtualenv () {
     virtualenvwrapper_verify_active_environment || return 1
     cd $VIRTUAL_ENV/$1
 }
+
+# Shows the content of the site-packages directory of the currently-active
+# virtualenv
+function lssitepackages () {
+    virtualenvwrapper_verify_active_environment || return 1
+    pyvers="`python -c 'import sys; print sys.version[:3]'`"
+    site_packages="lib/python${pyvers}/site-packages"
+    ls $VIRTUAL_ENV/$site_packages
+    
+    path_file="$site_packages/virtualenv_path_extensions.pth"
+    if [ -f "$path_file" ]
+    then
+        echo
+        echo "virtualenv_path_extensions.pth:"
+        cat "$path_file"
+    fi
+}
+
