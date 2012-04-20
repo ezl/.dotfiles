@@ -7,7 +7,7 @@ set nowrap
 set ignorecase smartcase incsearch
 set scrolloff=999
 
-map <f9> :w<CR>:!ipython %<CR>
+map <f9> :w<CR>:!ipython -i %<CR>
 
 " If using a mouse in screen, must set ttymouse=xterm2
 " if &term =~ "^screen"

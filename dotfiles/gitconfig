@@ -1,14 +1,23 @@
 [color]
-	ui = auto
-	diff = auto
-	status = auto
-	branch = auto
+    interactive = auto
+    pager = true
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+[ui]
+    color = auto
 [user]
-	name = ezl
-	email = ericzliu@gmail.com
+    name = ezl
+    email = ericzliu@gmail.com
 [alias]
-        lg = log --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit --date=relative --max-count=50
+    st = status
+    ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --max-count=50
+    co = checkout
+    br = branch
+    df = diff --color
+    ci = commit
 [core]
-	excludesfile = ~/.gitexcludes
+    excludesfile = ~/.gitexcludes
 [push]
-	default = matching
+    default = matching
