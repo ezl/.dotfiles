@@ -59,3 +59,24 @@ set nu
 set nostartofline   " Leave cursor in same column after page up/down.
 set ruler
 syntax on
+
+" Wrap visual selection in an HTML tag.
+vmap <Leader>w <Esc>:call VisualHTMLTagWrap()<CR>
+function! VisualHTMLTagWrap()
+  let tag = input("Tag to wrap block: ")
+  if len(tag) > 0
+    normal `>
+    if &selection == 'exclusive'
+      exe "normal i</".tag.">"
+    else
+      exe "normal a</".tag.">"
+    endif
+    normal `<
+    exe "normal i<".tag.">"
+    normal `<
+  endif
+endfunction
+
+
+command Killtrailingwhitespace :%s/\s\+$//g
+command Sub :%s/\r/\r/g

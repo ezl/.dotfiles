@@ -1,3 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/ezl/.xchat2'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/ezl/Dropbox/todo'
+let g:netrw_dirhist_2='/home/ezl/Dropbox/code/rocketlease/templates/rentapplication_files/default'
+let g:netrw_dirhist_3='/home/ezl/Dropbox/code/rocketlease/templates/layout-jk'
+let g:netrw_dirhist_4='/home/ezl/Dropbox/code/rocketlease/templates/layout-rg/staticpages'
+let g:netrw_dirhist_5='/home/ezl/Dropbox/code/rocketlease/templates/layout-rg/registration'
+let g:netrw_dirhist_6='/home/ezl/Dropbox/code/rocketlease/apps/accounts'
+let g:netrw_dirhist_7='/home/ezl/Dropbox/code/djangocontest/djangocontest'
+let g:netrw_dirhist_8='/home/ezl/octopress/source/_layouts'
+let g:netrw_dirhist_9='/home/ezl/Dropbox/octopress/source/_posts'
