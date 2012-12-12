@@ -77,6 +77,21 @@ function! VisualHTMLTagWrap()
   endif
 endfunction
 
+"   "custom copy'n'paste
+"   vmap <C-c> "*y
+"   " Yank current selection into system clipboard
+"   nmap <C-c> "*Y
+"   " Yank current line into system clipboard (if nothing is selected)
+"   nmap <C-v> "*p
+"   " Paste from system clipboard
+"   
+"   vmap <C-c> :w! ~/.vbuf<CR>
+"   "copy the current visual selection to ~/.vbuf
+"   nmap <C-c> :.w! ~/.vbuf<CR>
+"   "copy the current line to the buffer file if no visual selection
+"   nmap <C-v> :r ~/.vbuf<CR>
+"   "paste the contents of the buffer file
+
 
 command Killtrailingwhitespace :%s/\s\+$//g
 command Sub :%s/\r/\r/g
