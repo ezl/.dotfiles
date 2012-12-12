@@ -9,10 +9,10 @@ alias sl=ls
 alias mv='mv -iv'
 alias cp='cp -iv'
 
-alias grep='grep -n --color=auto'
-alias fgrep='fgrep -n --color=auto'
-alias egrep='egrep -n --color=auto'
-alias rgrep='rgrep -n --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias rgrep='rgrep --color=auto'
 alias diff='colordiff'
 
 # ccg's aliases
