@@ -32,3 +32,6 @@ export PIP_DOWNLOAD_CACHE="$HOME/.pip"
 # export PYTHONSTARTUP="$HOME/src/dotfiles/readline.py"
 # Note to self: as of Python 2.6, there is now support for local
 # site-packages in ~/.local/. See PEP-370.
+
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx

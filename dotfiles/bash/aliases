@@ -14,6 +14,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias rgrep='rgrep --color=auto'
 alias diff='colordiff'
+alias ls='ls -F'
 
 # ccg's aliases
 # alias dj='python ./manage.py runserver 0.0.0.0:8003'
