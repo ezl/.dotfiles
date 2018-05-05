@@ -9,89 +9,17 @@ set scrolloff=999
 
 map <f9> :w<CR>:!ipython -i %<CR>
 
-" If using a mouse in screen, must set ttymouse=xterm2
-" if &term =~ "^screen"
-"     set ttymouse=xterm2
-" endif
-" set mouse=a
-
 " Show tab chars and trailing whitespace.
 " Useful for cleaning up the slop left by Emacs users.
 set list
 set listchars=tab:>-,trail:-  "× ✖ • ● ▄ ■ ▐ ░ ▒ ▓ ▞ ┅ ━ ◀ ▶ ⋀ ⊥ ⎵ ⎶  ➜ ╳
 
-" require for pyflakes.vim:
-" is this conflicting with python.vim?
-"filetype plugin indent on
-
-" do i really want to do this?
-" automatically strip trailing whitespace when saving a file:
-" autocmd BufWrite * %s/\s\+$//
-autocmd BufRead *.c set cindent
-autocmd BufRead *.cpp set cindent
-autocmd BufRead *.cxx set cindent
-autocmd BufRead place.c set sw=2 sts=2
-autocmd BufRead *.txt set tw=76 wrap formatoptions+=n
-autocmd BufRead /tmp/cvs* set tw=76 wrap
-autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
-autocmd BufNewFile,BufRead *.html set ft=htmldjango
-
-" Enable omnicomplete
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-
-" try error-highlighting text that goes past colum 80
-" match ErrorMsg '\%>80v.\+'
-" alternative:
-"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v.*/
-
-" smartindent seems to have formatting leakage from cindent, because
-" it forces lines beginning with '#' to column 0.
 autocmd BufRead *.py set nocindent nosmartindent autoindent
 
-let fortran_free_source=1   " Default on new files is fixed-format Fortran
 set wildmode=longest,list
 set nu
 set nostartofline   " Leave cursor in same column after page up/down.
 set ruler
 syntax on
 
-" Wrap visual selection in an HTML tag.
-vmap <Leader>w <Esc>:call VisualHTMLTagWrap()<CR>
-function! VisualHTMLTagWrap()
-  let tag = input("Tag to wrap block: ")
-  if len(tag) > 0
-    normal `>
-    if &selection == 'exclusive'
-      exe "normal i</".tag.">"
-    else
-      exe "normal a</".tag.">"
-    endif
-    normal `<
-    exe "normal i<".tag.">"
-    normal `<
-  endif
-endfunction
-
-"   "custom copy'n'paste
-"   vmap <C-c> "*y
-"   " Yank current selection into system clipboard
-"   nmap <C-c> "*Y
-"   " Yank current line into system clipboard (if nothing is selected)
-"   nmap <C-v> "*p
-"   " Paste from system clipboard
-"   
-"   vmap <C-c> :w! ~/.vbuf<CR>
-"   "copy the current visual selection to ~/.vbuf
-"   nmap <C-c> :.w! ~/.vbuf<CR>
-"   "copy the current line to the buffer file if no visual selection
-"   nmap <C-v> :r ~/.vbuf<CR>
-"   "paste the contents of the buffer file
-
-
 command Killtrailingwhitespace :%s/\s\+$//g
-command Sub :%s/\r/\r/g
