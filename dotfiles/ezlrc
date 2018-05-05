@@ -1,7 +1,6 @@
 #!/bin/sh
 
 source ~/.bash/functions
-source ~/.bash/paths
 source ~/.bash/environmentvariables
 source ~/.bash/aliases
 source ~/.bash/virtualenvwrapperprompt
