@@ -36,11 +36,6 @@ do
     link "$PWD/$i" "$HOME/.${i##*/}"
 done
 
-echo "Installing virtualenv hooks."
-
-#This needs to correspond with your $WORKON_HOME as defined in virtualenvwrapper_bashrc
-install_scripts "$HOME/.virtualenvs" postactivate postmkvirtualenv
-
 #First time? Modify bashrc.
 if ! grep -q "ezlrc" ~/.bashrc
 then
