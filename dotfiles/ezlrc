@@ -6,3 +6,4 @@ source ~/.bash/aliases
 source ~/.bash/virtualenvwrapperprompt
 source ~/.bash/gitprompt
 source ~/.bash/prompt
+source /usr/local/bin/virtualenvwrapper.sh
