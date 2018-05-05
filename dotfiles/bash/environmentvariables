@@ -2,11 +2,6 @@
 ### Simple variables
 ###################################################
 
-if [ -z "$HOST" ]
-then
-    HOST=$(hostname | sed 's/\..*//')
-fi
-
 export EDITOR=vim
 export VISUAL=vim
 
@@ -17,21 +12,7 @@ then
     export TERM="xterm-color"
 fi
 
-# Change the window title of X terminals
-case $TERM in
-    xterm*|rxvt|Eterm|eterm)
-        PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
-        ;;
-    screen)
-        PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
-        ;;
-esac
-
-# Python stuff
-export PIP_DOWNLOAD_CACHE="$HOME/.pip"
-# export PYTHONSTARTUP="$HOME/src/dotfiles/readline.py"
-# Note to self: as of Python 2.6, there is now support for local
-# site-packages in ~/.local/. See PEP-370.
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
 
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
