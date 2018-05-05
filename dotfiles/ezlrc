@@ -3,6 +3,5 @@
 source ~/.bash/functions
 source ~/.bash/environmentvariables
 source ~/.bash/aliases
-source ~/.bash/virtualenvwrapperprompt
 source ~/.bash/gitprompt
 source ~/.bash/prompt
