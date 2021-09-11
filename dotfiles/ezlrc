@@ -1,9 +1,14 @@
 #!/bin/sh
 
-source ~/.bash/functions
 source ~/.bash/environmentvariables
 source ~/.bash/aliases
-source ~/.bash/virtualenvwrapperprompt
 source ~/.bash/gitprompt
-source ~/.bash/prompt
-source /usr/local/bin/virtualenvwrapper.sh
+source ~/.bash/git
+# source ~/.bash/prompt
+PROMPT='%(?.%F{green}√.%F{red}?%?)%f [%*] %B%F{240}%1~%f%b %# '
+
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+alias tunnel='ssh -L8000:localhost:8000 -L3000:localhost:3000 root@45.33.114.201'
+alias dev='ssh root@45.33.114.201'
+

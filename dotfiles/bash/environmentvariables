@@ -7,10 +7,10 @@ export VISUAL=vim
 
 export LC_COLLATE="POSIX"
 
-if [ "$TERM" == "xterm" ]
-then
-    export TERM="xterm-color"
-fi
+# if [ "$TERM" == "xterm" ]
+# then
+#     export TERM="xterm-color"
+# fi
 
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
